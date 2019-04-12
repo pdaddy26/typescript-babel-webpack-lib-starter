@@ -1,0 +1,38 @@
+{
+  "name": "typescript-babel-webpack-lib-starter",
+  "version": "1.0.0",
+  "description": "Library to be run on browser and server",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "prod": "webpack --config=webpack.prod.js",
+    "dev": "webpack --config=webpack.dev.js",
+    "build:prod": "npm run prod && npm run build:types",
+    "build:dev": "npm run dev && npm run build:types",
+    "build": "npm run build:prod"
+  },
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "core-js": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "fork-ts-checker-webpack-plugin": "^1.0.2",
+    "typescript": "^3.4.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
