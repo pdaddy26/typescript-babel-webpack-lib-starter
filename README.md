@@ -13,6 +13,16 @@ npm install
 npm run build
 ```
 
+## Run test
+```
+npm run test
+```
+
+## Run test with coverage
+```
+npm run test:cov
+```
+
 ## Create a package
 ``` shell
 npm pack
