@@ -1,5 +1,4 @@
 export class Person {
-  
   private firstname: string;
   private lastname: string;
 
@@ -11,5 +10,4 @@ export class Person {
   get fullname() {
     return `${this.firstname} ${this.lastname}`;
   }
-  
 }

@@ -12,7 +12,8 @@
     "build:dev": "npm run dev && npm run build:types",
     "build": "npm run build:prod",
     "test": "npx jasmine-ts --project tsconfig.test.json",
-    "test:cov": "npx nyc -e .ts -x \"*.spec.ts\" npm test"
+    "test:cov": "npx nyc -e .ts -x \"*.spec.ts\" npm test",
+    "lint":"npx tslint -p ."
   },
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -34,6 +35,7 @@
     "jasmine-ts": "^0.3.0",
     "nyc": "^13.3.0",
     "ts-node": "^8.1.0",
+    "tslint": "^5.15.0",
     "typescript": "^3.4.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
