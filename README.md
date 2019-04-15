@@ -27,3 +27,8 @@ npm run test:cov
 ``` shell
 npm pack
 ```
+
+## Run linter 
+```
+npm run lint
+```
