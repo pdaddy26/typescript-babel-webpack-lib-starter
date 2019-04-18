@@ -13,7 +13,8 @@
     "test:cov": "npx nyc -e .ts -x \"**/*.spec.ts\" npm test",
     "test:cov:watch": "nodemon --ext ts --exec 'npm run test:cov'",
     "lint": "npx tslint -p .",
-    "lint:watch": "nodemon --ext ts --exec 'npm run lint'"
+    "lint:watch": "nodemon --ext ts --exec 'npm run lint'",
+    "doc":"typedoc --out documentation src"
   },
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -38,6 +39,7 @@
     "nyc": "^14.0.0",
     "ts-node": "^8.1.0",
     "tslint": "^5.15.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.4.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
