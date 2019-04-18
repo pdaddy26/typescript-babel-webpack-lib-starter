@@ -10,8 +10,10 @@
     "build:dev": "webpack --config=webpack.dev.js && npm run build:types",
     "build": "npm run build:prod",
     "test": "npx jasmine-ts --project tsconfig.test.json",
-    "test:cov": "npx nyc -e .ts -x \"**/*.spec.ts\" npm test",
-    "test:cov:watch": "nodemon --ext ts --exec 'npm run test:cov'",
+    "test:cov:summary": "npx nyc --reporter=text-summary npm test",
+    "test:cov:text": "npx nyc --reporter=text npm test",
+    "test:cov:html": "npx nyc --reporter=html npm test",
+    "test:cov:watch": "nodemon --ext ts --exec 'npm run test:cov:summary'",
     "lint": "npx tslint -p .",
     "lint:watch": "nodemon --ext ts --exec 'npm run lint'",
     "doc":"typedoc --out documentation src"
@@ -47,5 +49,13 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.spec.ts"
+    ]
+  }
 }
